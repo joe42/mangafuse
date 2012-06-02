@@ -1,39 +1,33 @@
-CloudFusion
+mangafuse
 ===========
 
-CloudFusion lets you access your Dropbox or Sugarsync files like any file on your desktop.
+mangafuse lets you access your mangas from an online reader like any file on your desktop.
 
 Install 
 --------
 
-To install CloudFusion on Ubuntu do the following:
+To install mangafuse on linux open a command line and do:
 
-sudo apt-get install git
-git clone git://github.com/joe42/CloudFusion.git
-sudo apt-get install python-setuptools
-cd CloudFusion/cloudfusion/
-sudo python setup.py install
-mkdir -p .cloudfusion/logs mnt
-python -m cloudfusion.main mnt
+**sudo** *apt-get install git*
+**git** *clone git://github.com/joe42/mangafuse.git*
+**sudo apt-get** *install python-setuptools*
+**cd** *CloudFusion/cloudfusion/*
+**sudo python** *setup.py install*
+
 
 Get started
 ------------
 
-Add the username and password in the Dropbox or Sugarsync configuration file located at cloudfusion/cloudfusion/config/. Also add the keys you get from when creating an application (for Sugarsync you need to get a developer account first).
+**./start_mangafuse.sh**
 
-Now copy the configuration file to your mountpoint:
 
-cp ~/db.ini mnt/config/config
-
-This assumes that you saved the configuration file with your login data as db.ini to your home directory.
-
-Enjoy accessing your files in the directory mnt/data.
+This will open your file browser in the mangafuse directory. There is already one directory with mangas inside. 
+To access other mangas, simply create a new folder here. So assuming that you would like to read a manga called bleach, simply create a folder called bleach. 
+It will contain all currently available chapters.
 
 
 Notes
 ------
 
-I am not affiliated with Dropbox nor with Sugarsync.
-
-Since the Dropbox API does not allow write synchronization an application like this file system cannot guarantee consistency when several clients try to write the same file. Therefore it cannot obtain production status. Hence, you need to create your own developer keys to use it.
+Please do not copy complete folders. This would put a huge load on the servers.
 
