@@ -14,7 +14,7 @@ To install mangafuse on linux open a command line and type:
 
 **sudo apt-get** *install python-setuptools*
 
-**cd** *CloudFusion/cloudfusion/*
+**cd** *mangafuse/cloudfusion/*
 
 **sudo python** *setup.py install*
 

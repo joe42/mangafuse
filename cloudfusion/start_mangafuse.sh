@@ -1,12 +1,12 @@
 #!bin/bash
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $CURRENT_DIR
-mkdir -p ~/.mangafuse  .cloudfusion/logs
-python -m cloudfusion.main  ~/.mangafuse 
-cp cloudfusion/config/mangafuse.ini mnt/config/config
-mkdir  ~/.mangafuse/data/tower\ of\ god
-if [ ! -h ~/mangafuse ]
+mkdir -p ~/.mangas  .cloudfusion/logs
+python -m cloudfusion.main  ~/.mangas 
+cp cloudfusion/config/mangafuse.ini ~/mangas/data/config/config
+mkdir  ~/.mangas/data/tower\ of\ god
+if [ ! -h ~/mangas ]
 then
-	ln -sf ~/.mangafuse/data ~/mangafuse
+	ln -sf ~/.mangas/data ~/mangas
 fi
-xdg-open ~/mangafuse
+xdg-open ~/mangas
