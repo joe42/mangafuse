@@ -10,6 +10,7 @@ from cloudfusion.pyfusebox.pyfusebox import *
 from cloudfusion.pyfusebox.flushing_pyfusebox import FlushingPyFuseBox
 from cloudfusion.pyfusebox.virtualconfigfile import VirtualConfigFile
 from cloudfusion.store.dropbox.dropbox_store import DropboxStore
+from cloudfusion.store.mangastore.manga_store import MangaStore
 from cloudfusion.store.sugarsync.sugarsync_store import SugarsyncStore
 from cloudfusion.store.caching_store import CachingStore
 from cloudfusion.store.metadata_caching_store import MetadataCachingStore
@@ -147,13 +148,15 @@ class ConfigurablePyFuseBox(FlushingPyFuseBox):
         if cache_time > 0 and metadata_cache_time > 0:
             store = MetadataCachingStore( CachingStore( MetadataCachingStore( store, metadata_cache_time ), cache_time ), metadata_cache_time )
             self.set_cache_expiration_time(cache_time)
+            super( ConfigurablePyFuseBox, self ).start_cyclic_flushing()
         elif cache_time > 0:
             store = CachingStore(store, cache_time)
             self.set_cache_expiration_time(cache_time)
+            super( ConfigurablePyFuseBox, self ).start_cyclic_flushing()
         elif metadata_cache_time > 0:
             store = MetadataCachingStore( store, metadata_cache_time )
+            super( ConfigurablePyFuseBox, self ).start_cyclic_flushing()
         self.store = store
-        super( ConfigurablePyFuseBox, self ).start_cyclic_flushing()
         self.logger.debug("initialized service")
         self.store_initialized = True
         
@@ -161,6 +164,8 @@ class ConfigurablePyFuseBox(FlushingPyFuseBox):
         self.logger.debug("__get_new_store:")
         if service.lower() == "sugarsync":
             store = SugarsyncStore(auth)
+        elif service.lower() == "mangafuse":
+            store = MangaStore(auth)
         else: # default
             self.logger.debug("get dropbox store")
             try:
