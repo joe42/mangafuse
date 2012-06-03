@@ -5,6 +5,7 @@ user=`id -nu`
 if [ "`id -u`" == "0" ]; then
   echo Execute this script as normal user and not as root.
   exit
+fi
 if [ `which sudo > /dev/null` ]; then
   sudo su
 else
