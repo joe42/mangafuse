@@ -1,15 +1,18 @@
 #!/bin/bash
 user="$1"
 
-if [ "`id -u`" == "0" ]; then
+if [ "`id -u`" == "0" -a "$user" == "" ]; then
   echo Execute this script as normal user and not as root.
   exit
 else
-  echo "Please, type root's password..."
-  if [ `which sudo > /dev/null` ]; then
-    sudo "bash $0 $@"
-  else
-    su -c "bash $0 $@"
+  if [ "`id -u`" != "0" ]; then
+    echo "Please, type root's password..."
+    if [ `which sudo > /dev/null` ]; then
+      sudo "bash $0 $@"
+    else
+      su -c "bash $0 $@"
+    fi
+    exit
   fi
 fi
 
