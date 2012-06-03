@@ -1,6 +1,6 @@
 #!/bin/bash
 PYTHON_PCK_PATH="`python -c 'import cloudfusion; print cloudfusion.__file__'`"
-CONFIG_DIR=`dirname "$PYTHON_PCK_PATH"`"/cloudfusion/config"
+CONFIG_DIR=`dirname "$PYTHON_PCK_PATH"`"/config"
 
 mkdir -p ~/.mangas  .cloudfusion/logs
 python -m cloudfusion.main  ~/.mangas foreground >/dev/null 2>&1 &
