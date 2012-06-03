@@ -6,17 +6,13 @@ mangafuse lets you access your mangas from an online reader like any file on you
 Install 
 --------
 
-To install mangafuse on linux open a command line and type:
+To install mangafuse on linux download the install script. From the command line you can type:
 
-**sudo** *apt-get install git*
+wget https://raw.github.com/joe42/mangafuse/master/install.sh
 
-**git** *clone git://github.com/joe42/mangafuse.git*
+Now start the install script from the command line:
 
-**sudo apt-get** *install python-setuptools*
-
-**cd** *mangafuse/cloudfusion/*
-
-**sudo python** *setup.py install*
+**bash** *install.sh*
 
 
 Get started
@@ -24,7 +20,7 @@ Get started
 
 Just type the following in the command line or double click start_mangafuse.sh inside the cloudfusion directory:
 
-**./start_mangafuse.sh**
+**mangafuse**
 
 
 This will open your file browser in the mangafuse directory. There is already one directory with mangas inside. 
