@@ -17,7 +17,7 @@ else
 fi
 
 apt-get install git libfuse-dev fuse-utils python-setuptools -y
-chmod g+x /usr/bin/fusermount
+chmod a+x /usr/bin/fusermount
 chmod a+rw /dev/fuse
 usermod -a -G fuse $user
 git clone git://github.com/joe42/mangafuse.git
