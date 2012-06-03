@@ -24,4 +24,4 @@ git clone git://github.com/joe42/mangafuse.git
 chown -R $user:$user mangafuse
 cd mangafuse/cloudfusion/
 python setup.py install
-cp ~/start_mangafuse.sh /usr/bin/mangafuse
+cp start_mangafuse.sh /usr/bin/mangafuse
