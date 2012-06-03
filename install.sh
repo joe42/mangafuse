@@ -16,8 +16,9 @@ else
   fi
 fi
 
-apt-get install git -y
-apt-get install python-setuptools -y
+apt-get install git libfuse-dev fuse-utils python-setuptools -y
+chmod +x /usr/bin/fusermount
+usermod -a -G fuse $user
 git clone git://github.com/joe42/mangafuse.git
 chown -R $user:$user mangafuse
 cd mangafuse/cloudfusion/
