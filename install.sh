@@ -1,15 +1,16 @@
 #!/bin/bash
-has_sudo=0
-user=`id -nu`
+user="$1"
 
 if [ "`id -u`" == "0" ]; then
   echo Execute this script as normal user and not as root.
   exit
-fi
-if [ `which sudo > /dev/null` ]; then
-  sudo su
 else
-  su
+  echo "Please, type root's password..."
+  if [ `which sudo > /dev/null` ]; then
+    sudo "$0 $@"
+  else
+    su -c "$0 $@"
+  fi
 fi
 
 apt-get install git -y
