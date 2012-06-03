@@ -8,9 +8,9 @@ else
   if [ "`id -u`" != "0" ]; then
     echo "Please, type root's password..."
     if [ `which sudo > /dev/null` ]; then
-      sudo "bash $0 $@"
+      sudo "bash $0 "`id -un`
     else
-      su -c "bash $0 $@"
+      su -c "bash $0 "`id -un`
     fi
     exit
   fi
