@@ -11,7 +11,7 @@ case "$1" in
 		chmod o+x -f /bin/fusermount
 	fi
 	chmod o+rw /dev/fuse
-	ln -sf "$MAIN_DIR"/start_mangafuse.sh /usr/bin/mangafuse
+	mv "$MAIN_DIR"/start_mangafuse.sh /usr/bin/mangafuse
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

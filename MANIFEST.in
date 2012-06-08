@@ -1,1 +1,2 @@
-recursive-include cloudfusion/config *.conf *.ini *.cfg
+recursive-include cloudfusion/config *.conf *.ini *.cfg 
+include cloudfusion/start_mangafuse.sh
