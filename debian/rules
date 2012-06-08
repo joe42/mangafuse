@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+%:
+	dh $@ --buildsystem=python_distutils --with=python2
+override_dh_auto_clean:
+	dh_auto_clean
+	find -name '*.pyo' -exec rm -f {} \;

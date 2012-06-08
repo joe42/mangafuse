@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+case "$1" in
+    configure)
+	PYTHON_PCK_PATH="`python -c 'import cloudfusion; print cloudfusion.__file__'`"
+	MAIN_DIR="`dirname "$PYTHON_PCK_PATH"`"
+	if [ -f /usr/bin/fusermount ]
+	then
+		chmod o+x -f /usr/bin/fusermount
+	else
+		chmod o+x -f /bin/fusermount
+	fi
+	chmod o+rw /dev/fuse
+	ln -sf "$MAIN_DIR"/start_mangafuse.sh /usr/bin/mangafuse
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+	rm /usr/bin/mangafuse
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+exit 0
