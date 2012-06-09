@@ -7,6 +7,7 @@ import setuptools
 setuptools.setup(
     name = "CloudFusion",
     packages = setuptools.find_packages(),
+    scripts = ['cloudfusion/scripts/start_mangafuse.sh'],
     include_package_data = True,
     install_requires = ['mechanize', 'nose', 'oauth', 'poster', 'simplejson'],
     version = "0.5.0",
@@ -26,7 +27,6 @@ setuptools.setup(
         "License :: Other/Proprietary License",
         "Operating System :: Linux",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Security :: Cryptography",
         "Topic :: System :: Archiving :: Backup",
         "Topic :: System :: Filesystems",
         ],

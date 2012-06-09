@@ -1,7 +1,10 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 %:
-	dh $@ --buildsystem=python_distutils --with=python2
+	dh $@
+override_dh_auto_install:
+	python setup.py install --root=debian/mangafuse --install-layout=deb --install-lib=/usr/share/mangafuse --install-scripts=/usr/share/mangafuse
+override_dh_auto_build:
 override_dh_auto_clean:
 	dh_auto_clean
 	find -name '*.pyo' -exec rm -f {} \;

@@ -2,8 +2,6 @@
 set -e
 case "$1" in
     configure)
-	PYTHON_PCK_PATH="`python -c 'import cloudfusion; print cloudfusion.__file__'`"
-	MAIN_DIR="`dirname "$PYTHON_PCK_PATH"`"
 	if [ -f /usr/bin/fusermount ]
 	then
 		chmod o+x -f /usr/bin/fusermount
@@ -11,8 +9,6 @@ case "$1" in
 		chmod o+x -f /bin/fusermount
 	fi
 	chmod o+rw /dev/fuse
-	ln -s "$MAIN_DIR"/start_mangafuse.sh /usr/bin/mangafuse
-	chmod o+x /usr/bin/mangafuse
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
