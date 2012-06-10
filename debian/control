@@ -3,14 +3,14 @@ Maintainer: Johannes Müller <quirksquarks@web.de>
 Section: python
 Priority: optional
 Homepage: https://github.com/joe42/mangafuse
-Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4)
+Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4), python (>=2.6)
 Standards-Version: 3.8.4
-XS-Python-Version: current
+XS-Python-Version: >=2.6
 
 Package: python-cloudfusion
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-nose, python-oauth, python-simplejson, libfuse-dev, fuse-utils, python-setuptools
-XB-Python-Version: ${python:Versions}
+XB-Python-Version: >=2.6
 Provides: ${python:Provides}
 Description: manga file system for accessing online reader
 	mangafuse lets you access your mangas from an online reader like any file on your desktop.
