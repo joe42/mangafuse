@@ -10,7 +10,7 @@ To install mangafuse on linux download the install script. From the command line
 
 wget https://raw.github.com/joe42/mangafuse/master/install.sh
 
-Now start the install script from the command line:
+As root, start the install script from the command line:
 
 **bash** *install.sh*
 
