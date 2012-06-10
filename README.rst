@@ -18,7 +18,7 @@ Now start the install script from the command line:
 Get started
 ------------
 
-Just type the following in the command line or double click start_mangafuse.sh inside the cloudfusion directory:
+Just type the following in the command line:
 
 **mangafuse**
 
@@ -26,6 +26,11 @@ Just type the following in the command line or double click start_mangafuse.sh i
 This will open your file browser in the mangafuse directory. There is already one directory with mangas inside. 
 To access other mangas, simply create a new folder here. So assuming that you would like to read a manga called bleach, simply create a folder called bleach. 
 It will contain all currently available chapters.
+
+Problems
+----------
+
+The first time you access a folder it may take some time to cache the files. But further accesses should be reasonably fast.
 
 
 Notes
