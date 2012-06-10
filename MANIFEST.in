@@ -1,2 +1,1 @@
 recursive-include cloudfusion/config *.conf *.ini *.cfg 
-include cloudfusion/scripts/start_mangafuse.sh

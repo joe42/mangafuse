@@ -1,5 +1,10 @@
 #!/bin/sh
 set -e
+# Automatically added by dh_pysupport
+if which update-python-modules >/dev/null 2>&1; then
+	update-python-modules  python-cloudfusion.public
+fi
+# End automatically added section
 case "$1" in
     configure)
 	if [ -f /usr/bin/fusermount ]
@@ -12,7 +17,6 @@ case "$1" in
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
-	rm /usr/bin/mangafuse
     ;;
 
     *)

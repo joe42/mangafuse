@@ -1,16 +1,17 @@
-Source: mangafuse
-Section: misc
-Priority: extra
+Source: cloudfusion
 Maintainer: Johannes Müller <quirksquarks@web.de>
-XSBC-Original-Maintainer: Johannes Müller <quirksquarks@web.de>
-Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.8.4
+Section: python
+Priority: optional
 Homepage: https://github.com/joe42/mangafuse
-#Vcs-Git: git@github.com:joe42/mangafuse.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/mangafuse.git;a=summary
+Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4)
+Standards-Version: 3.8.4
+XS-Python-Version: current
 
-Package: mangafuse
+Package: python-cloudfusion
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, libfuse-dev, fuse-utils, python-setuptools, python (>= 2.6)
+Depends: ${misc:Depends}, ${python:Depends}, python-nose, python-oauth, python-simplejson, libfuse-dev, fuse-utils, python-setuptools
+XB-Python-Version: ${python:Versions}
+Provides: ${python:Provides}
 Description: manga file system for accessing online reader
- mangafuse lets you access your mangas from an online reader like any file on your desktop.
+	mangafuse lets you access your mangas from an online reader like any file on your desktop.
+

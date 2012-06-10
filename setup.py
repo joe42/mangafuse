@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 30.08.2011
 
@@ -7,13 +8,13 @@ import setuptools
 setuptools.setup(
     name = "CloudFusion",
     packages = setuptools.find_packages(),
-    scripts = ['cloudfusion/scripts/start_mangafuse.sh'],
+    scripts = ['scripts/mangafuse'],
     include_package_data = True,
     install_requires = ['mechanize', 'nose', 'oauth', 'poster', 'simplejson'],
     version = "0.5.0",
-    description = "Filesystem interface to cloud storage services",
-    author = "Johannes Mueller",
-    author_email = "johannes.mueller1@mail.inf.tu-dresden.de",
+    description = "manga file system for accessing online reader",
+    author = "Johannes Müller",
+    author_email = "quirksquarks@web.de",
     url = "https://github.com/joe42/CloudFusion",
     download_url = "https://github.com/joe42/cloudfusion.tgz",
     keywords = ["encoding", "i18n", "xml"],
@@ -31,6 +32,6 @@ setuptools.setup(
         "Topic :: System :: Filesystems",
         ],
     long_description = """\
-blubb
+	mangafuse lets you access your mangas from an online reader like any file on your desktop.
 """
 )
