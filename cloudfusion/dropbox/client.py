@@ -7,7 +7,7 @@ it's fairly self-explanatory.
 from cloudfusion.dropbox import rest
 import urllib
 import urllib2
-import poster
+import cloudfusion.poster as poster
 import httplib
 
 API_VERSION=0
