@@ -26,7 +26,10 @@ New releases of poster will always have a version number that compares greater
 than an older version of poster.
 New in version 0.6."""
 
+import sys
+import cloudfusion
+sys.path.append(cloudfusion.__path__[0]) 
 import poster.streaminghttp
-import poster.encode
+import poster.encode 
 
 version = (0, 8, 1) # Thanks JP!
