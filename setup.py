@@ -10,7 +10,7 @@ setuptools.setup(
     packages = setuptools.find_packages(),
     scripts = ['scripts/mangafuse'],
     include_package_data = True,
-    install_requires = ['mechanize', 'nose', 'oauth', 'poster', 'simplejson'],
+    install_requires = ['mechanize', 'nose', 'oauth', 'simplejson'],
     version = "0.5.0",
     description = "manga file system for accessing online reader",
     author = "Johannes Müller",
