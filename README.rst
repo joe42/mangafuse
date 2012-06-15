@@ -8,7 +8,7 @@ Install
 
 To install mangafuse on linux download the install script. From the command line you can type:
 
-wget https://raw.github.com/joe42/mangafuse/master/install.sh
+**wget** *https://raw.github.com/joe42/mangafuse/master/install.sh*
 
 As root, start the install script from the command line:
 
@@ -17,10 +17,12 @@ As root, start the install script from the command line:
 Now add your current user to the fuse group:
 
 On Debian:
-su -c "usermod -a -G fuse "`id -un`
+
+**su** *-c "usermod -a -G fuse "`id -un`*
 
 On Ubuntu:
-sudo "usermod -a -G fuse "`id -un`
+
+**sudo** *"usermod -a -G fuse "`id -un`*
 
 
 Get started
