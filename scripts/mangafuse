@@ -22,4 +22,10 @@ if [ ! -h ~/mangas ]
 then
 	ln -sf ~/.mangas/data ~/mangas
 fi
-xdg-open ~/mangas
+sleep 1
+if [ ! "`file a|grep broken`" = "" ]
+then 
+    xdg-open ~/mangas 
+fi
+
+
