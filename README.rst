@@ -18,11 +18,11 @@ Now add your current user to the fuse group:
 
 On Debian:
 
-**su** *-c "usermod -a -G fuse "`id -un`*
+**su** *-c usermod -a -G fuse `id -un`*
 
 On Ubuntu:
 
-**sudo** *"usermod -a -G fuse "`id -un`*
+**sudo** *usermod -a -G fuse `id -un`*
 
 
 Get started
